@@ -7,6 +7,7 @@
   "rules": {
     "no-console": "off",
     "comma-dangle": "off",
+    "prefer-destructuring": ["error", {"object": false, "array": true}],
     "react/jsx-filename-extension": "off",
     "react/no-unused-state": "off",
     "react/destructuring-assignment": "off",
