@@ -1,5 +1,6 @@
-const express = require('express');
+/* eslint-disable */
 
+const express = require('express');
 
 const helmet = require('helmet');
 const cors = require('cors');
@@ -19,9 +20,9 @@ app.use(express.json());
 
 app.use(express.static('dist'));
 
-// const users = require('./routers/users');
+const users = require('./routes/users');
 
-// app.use('/users', users);
+app.use('/users', users);
 
 app.get('/api/hello', (req, res) => {
   res.send({ message: "Hello World!!" });
