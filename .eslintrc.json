@@ -12,6 +12,7 @@
     "react/no-unused-state": "off",
     "react/destructuring-assignment": "off",
     "react/jsx-one-expression-per-line": "off",
+    "react/forbid-prop-types": "off",
     "quotes": "off",
     "import/extensions": [
       "error", "ignorePackages",
