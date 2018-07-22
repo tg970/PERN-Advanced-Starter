@@ -29,7 +29,7 @@ Hop into the project directory and install the dependencies:
 	$ npm i
 
 > If you have npm v6+ installed you'll notice 0 vulnerabilities are found in
-> the 12,000+ packages being scanned (at time of publishing, late July 2018).
+> the 12,000+ packages being scanned (as of late July 2018).
 > I'm very proud of that, it wasn't easy! More about npm's new audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
 To start the Webpack dev server run:
@@ -42,6 +42,22 @@ And to build for deployment/production run:
 	$ npm start
 
 Also don't forget that your API won't work unless you create a users table. To do this hit the following routes, either in your browser or with [Postman](https://www.getpostman.com/).
+
+## What's happening under the hood
+
+#### Config files you might not recognize:
+_.babelrc_ - [Babel](https://babeljs.io/) is a toolchain used by Webpack to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript for old browsers or environments. This file tells Babel our presets and plugins.
+
+_.eslintrc.json_ - This config file tells [ESLint](https://eslint.org/) our settings for interpreting and reporting errors and warnings while we're writing our code. Delete or add rules, change style guide, whatever you want, this is where you do it. For this to work you'll need to make sure you have a linter and eslint installed in your code editor.  
+
+_.nodemon.json_ - When Webpack spins up a dev server it also starts [nodemon](https://nodemon.io/) in the background to proxy for api calls. This file tells nodemon which directory to watch for changes and restart when files are updated.
+
+_.webpack.config.js_ - Oh the magic, and let's be honest *heart-burn*, of Webpack! This file gives Webpack all the important details for doing what it does. Again this file is configurable; for more information visit [the configuration docs](https://webpack.js.org/configuration/).
+
+
+## How did we get here?
+
+There are so many resources out there to help developers resolve issues and build new skills and tools. I'm very thankful for the sharing of knowledge and I wanted to put this project together to help other devs that are hoping to try their hand at a full-stack React application.
 
 This starter app was inspired and guided by the following resources:
 
