@@ -3,7 +3,6 @@
 import React, { Component } from "react";
 
 import Header from "./components/Header/Header";
-import HeaderLinks from "./components/Header/HeaderLinks";
 
 import "./app.css";
 import ReactImage from "./react.png";
@@ -29,7 +28,6 @@ export default class App extends Component {
       <div className="appBody">
         <Header
           brand="PERN Starter App"
-          rightLinks={<HeaderLinks home />}
           fixed
           color="dark"
           changeColorOnScroll={{

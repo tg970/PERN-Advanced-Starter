@@ -20,10 +20,31 @@ import headerLinksStyle from "assets/jss/material-kit-react/components/headerLin
 
 function HeaderLinks({ ...props }) {
   const { classes, home } = props;
-  console.log(props);
-  let ctLinks;
-  if (!home) {
-    ctLinks = <div>
+  return (
+    <List className={classes.list}>
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          buttonText="Components"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Apps}
+          dropdownList={[
+            <Link to="/components" className={classes.dropdownLink}>
+              All components
+            </Link>,
+            <a
+              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
+              target="_blank"
+              className={classes.dropdownLink}
+            >
+              Documentation
+            </a>
+          ]}
+        />
+      </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"
@@ -85,35 +106,6 @@ function HeaderLinks({ ...props }) {
           <CloudDownload className={classes.icons} /> Download
         </Button>
       </ListItem>
-    </div>
-  }
-  return (
-    <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Components"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/components" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
-          ]}
-        />
-      </ListItem>
-
-      {ctLinks}
     </List>
   );
 }

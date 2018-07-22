@@ -10,7 +10,7 @@ const db = require('./db');
 
 const app = express();
 
-const PORT = process.env.PORT || 1122;
+const PORT = process.env.PORT || 3000;
 
 app.use(morgan('tiny'));
 app.use(helmet());
