@@ -14,6 +14,7 @@
     "react/jsx-one-expression-per-line": "off",
     "react/forbid-prop-types": "off",
     "quotes": "off",
+    "import/order":"off",
     "import/extensions": [
       "error", "ignorePackages",
       {

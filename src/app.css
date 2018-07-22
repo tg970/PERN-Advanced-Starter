@@ -1,7 +1,24 @@
-.logo {
-  max-width: 4em;
+.appBody {
+  padding-left: 2em;
 }
 
-.hello-btn {
+.logo {
+  max-width: 4em;
+  height: 4em;
+}
+
+.greeting {
   margin-top: 100px !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.homeLink:link, .homeLink:visited {
+  color: #555 !important;
+}
+
+.homeLink:hover {
+  text-shadow: 2px 2px 8px #555;
 }
