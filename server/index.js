@@ -6,7 +6,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('morgan');
 
-const db = require('../db');
+const db = require('./db');
 
 const app = express();
 

@@ -41,14 +41,14 @@ class UsersRepository {
   }
 
   // Drops the table;
-  drop() {
-    return this.db.none(sql.drop);
-  }
+  // drop() {
+  //   return this.db.none(sql.drop);
+  // }
 
   // Removes all records from the table;
-  empty() {
-    return this.db.none(sql.empty);
-  }
+  // empty() {
+  //   return this.db.none(sql.empty);
+  // }
 
   // Adds a new user, and returns the new object;
   add(values) {
