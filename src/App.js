@@ -45,7 +45,7 @@ export default class App extends Component {
             </h1>
           ) : (
             <h1>
-              Loading... please wait!
+              Loading, please wait...
             </h1>
           )}
         </div>
