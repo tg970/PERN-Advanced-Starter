@@ -12,7 +12,7 @@
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "deploy": "npm run build && git add . && git commit -m \"deployment build\" && gpom && gphm"
+    "deploy": "npm run build && git add . && git commit -m \"deployment build\" && git push origin master && git push heroku master"
   },
   "repository": {
     "type": "git",
