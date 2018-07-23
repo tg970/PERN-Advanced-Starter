@@ -36,14 +36,14 @@ class ProductsRepository {
   }
 
   // Drops the table;
-  drop() {
-    return this.db.none(sql.drop);
-  }
+  // drop() {
+  //   return this.db.none(sql.drop);
+  // }
 
   // Removes all records from the table;
-  empty() {
-    return this.db.none(sql.empty);
-  }
+  // empty() {
+  //   return this.db.none(sql.empty);
+  // }
 
   // Adds a new record and returns the full object;
   // It is also an example of mapping HTTP requests into query parameters;
