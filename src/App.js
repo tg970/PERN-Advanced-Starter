@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import SecRedux from "./components/Users/Users";
+import Users from "./components/Users/Users";
 import Header from "./components/Header/Header";
 
 import "./app.css";
@@ -49,7 +49,7 @@ export default class App extends Component {
             </h1>
           )}
         </div>
-        <SecRedux />
+        <Users />
         <h2>
           Check out these pages:
         </h2>

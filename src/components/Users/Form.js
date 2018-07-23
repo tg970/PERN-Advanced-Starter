@@ -4,6 +4,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addUser } from "store/actions/index";
 
+import CustomInput from "components/CustomInput/CustomInput.jsx";
+import Button from "components/CustomButtons/Button.jsx";
+
 const mapDispatchToProps = (dispatch) => {
   return {
     addUser: user => dispatch(addUser(user))
@@ -50,19 +53,23 @@ class ConnectedForm extends Component {
     const { name } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-success btn-lg">
-          SAVE
-        </button>
+        <CustomInput
+          labelText="Name"
+          id="name"
+          formControlProps={{
+            fullWidth: true
+          }}
+          inputProps={{
+            value: this.state.name,
+            onChange: this.handleChange,
+          }}
+        />
+        <Button
+          color="primary"
+          type="submit"
+        >
+          Save
+        </Button>
       </form>
     );
   }

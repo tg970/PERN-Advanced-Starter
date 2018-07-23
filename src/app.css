@@ -10,10 +10,15 @@
 
 .greeting {
   margin-top: 100px !important;
+  margin-left: 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
   /* justify-content: center; */
+}
+
+.greeting h1 {
+  margin-left: .5em;
 }
 
 .homeLink:link, .homeLink:visited {

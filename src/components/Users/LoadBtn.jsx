@@ -1,4 +1,5 @@
-/* eslint "arrow-body-style": off, "react/prop-types": off */
+/* eslint "arrow-body-style": off, "react/prop-types": off,
+ "no-restricted-syntax": off, "prefer-const": off */
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
@@ -10,6 +11,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addUser: user => dispatch(addUser(user))
   };
+};
+
+const mapStateToProps = (state) => {
+  return { users: state.users };
 };
 
 class ConnectedLoadBtn extends Component {
@@ -25,7 +30,12 @@ class ConnectedLoadBtn extends Component {
     fetch('/api/users/all')
       .then(res => res.json())
       .then((data) => {
-        data.forEach(this.props.addUser);
+        data.forEach((user) => {
+          for (let i of this.props.users) {
+            if (user.id === i.id) return;
+          }
+          this.props.addUser(user);
+        });
         this.setState({ loaded: true });
       });
   }
@@ -43,6 +53,6 @@ class ConnectedLoadBtn extends Component {
   }
 }
 
-const LoadBtn = connect(null, mapDispatchToProps)(ConnectedLoadBtn);
+const LoadBtn = connect(mapStateToProps, mapDispatchToProps)(ConnectedLoadBtn);
 
 export default LoadBtn;

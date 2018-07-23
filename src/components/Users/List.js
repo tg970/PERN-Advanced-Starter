@@ -9,9 +9,9 @@ const mapStateToProps = state => {
 
 const ConnectedList = ({ users }) => (
   <ul>
-    {users.map(el => (
-      <li key={el.id}>
-        {el.name}
+    {users.map(user => (
+      <li key={user.id}>
+        {user.name}
       </li>
     ))}
   </ul>
