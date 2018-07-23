@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addUser } from "../store/actions/index";
+import { addUser } from "store/actions/index";
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -25,7 +25,6 @@ class ConnectedForm extends Component {
   }
 
   postData(url = ``, data = {}) {
-    console.log(url);
     return fetch(url, {
         method: "POST",
         headers: {

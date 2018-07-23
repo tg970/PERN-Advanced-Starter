@@ -7,10 +7,11 @@ import Paper from '@material-ui/core/Paper';
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 
-import Form from "components/Form";
-import List from "components/List";
+import Form from "components/Users/Form";
+import List from "components/Users/List";
+import LoadBtn from "components/Users/LoadBtn";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     padding: '1em',
     marginTop: '1em',
@@ -39,7 +40,7 @@ class SecRedux extends Component {
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
             <h3>
-              Add a user to via API and Redux:
+              Add a user:
             </h3>
             <Form />
           </GridItem>
@@ -48,6 +49,7 @@ class SecRedux extends Component {
               List of users:
             </h3>
             <List />
+            <LoadBtn />
           </GridItem>
         </GridContainer>
       </Paper>

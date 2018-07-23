@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import SecRedux from "./components/SecRedux";
+import SecRedux from "./components/Users/Users";
 import Header from "./components/Header/Header";
 
 import "./app.css";
@@ -20,7 +20,6 @@ export default class App extends Component {
       .then(res => res.json())
       .then((data) => {
         this.setState({ greeting: data.message });
-        console.log(data);
       });
   }
 
