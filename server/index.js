@@ -24,8 +24,8 @@ app.use(express.static('dist'));
 const users = require('./routes/users');
 const products = require('./routes/products');
 
-app.use('/users', users);
-app.use('/products', products);
+app.use('/api/users', users);
+app.use('/api/products', products);
 
 // test for client comm to server
 app.get('/api/hello', (req, res) => {

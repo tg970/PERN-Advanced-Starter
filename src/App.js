@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
+import SecRedux from "./components/SecRedux";
 import Header from "./components/Header/Header";
 
 import "./app.css";
@@ -49,9 +50,10 @@ export default class App extends Component {
             </h1>
           )}
         </div>
-        <h3>
+        <SecRedux />
+        <h2>
           Check out these pages:
-        </h3>
+        </h2>
         <ul>
           <li>
             <Link className="homeLink" to="/components">
