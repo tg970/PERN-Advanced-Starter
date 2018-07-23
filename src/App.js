@@ -1,6 +1,7 @@
 /* eslint "react/prop-types": off */
 
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 import Header from "./components/Header/Header";
 
@@ -52,11 +53,26 @@ export default class App extends Component {
           Check out these pages:
         </h3>
         <ul>
-          {/* <li><a href="/about">About</a></li> */}
-          <li><a className="homeLink" href="/components">Components</a></li>
-          <li><a className="homeLink" href="/login">Login</a></li>
-          <li><a className="homeLink" href="/landing">Landing</a></li>
-          <li><a className="homeLink" href="/profile">Profile</a></li>
+          <li>
+            <Link className="homeLink" to="/components">
+              Components
+            </Link>
+          </li>
+          <li>
+            <Link className="homeLink" to="/login">
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link className="homeLink" to="/landing">
+              Landing
+            </Link>
+          </li>
+          <li>
+            <Link className="homeLink" to="/profile">
+              Profile
+            </Link>
+          </li>
         </ul>
       </div>
     );
