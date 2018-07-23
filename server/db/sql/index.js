@@ -52,15 +52,14 @@ module.exports = {
     init: sql('users/init.sql'),
     drop: sql('users/drop.sql'),
     add: sql('users/add.sql')
+  },
+  products: {
+    create: sql('products/create.sql'),
+    empty: sql('products/empty.sql'),
+    drop: sql('products/drop.sql'),
+    find: sql('products/find.sql'),
+    add: sql('products/add.sql')
   }
-  // },
-  // products: {
-  //     create: sql('products/create.sql'),
-  //     empty: sql('products/empty.sql'),
-  //     drop: sql('products/drop.sql'),
-  //     find: sql('products/find.sql'),
-  //     add: sql('products/add.sql')
-  // }
 };
 
 // Possible alternative - enumerating all SQL files automatically ;)
