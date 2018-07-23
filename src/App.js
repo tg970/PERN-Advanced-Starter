@@ -49,9 +49,6 @@ export default class App extends Component {
             </h1>
           )}
         </div>
-        <h2>
-          testing!!
-        </h2>
         <h3>
           Check out these pages:
         </h3>
