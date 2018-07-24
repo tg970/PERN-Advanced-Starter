@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
 import Users from "./components/Users/Users";
+import PageLinks from "./components/PageLinks/PageLinks";
 import Header from "./components/Header/Header";
 
 import "./app.css";
@@ -35,6 +36,7 @@ export default class App extends Component {
             height: 400,
             color: "white"
           }}
+          home
           {...rest}
         />
         <div className="greeting">
@@ -50,6 +52,7 @@ export default class App extends Component {
           )}
         </div>
         <Users />
+        <PageLinks />
         <h2>
           Check out these pages:
         </h2>

@@ -67,7 +67,8 @@ class Header extends React.Component {
       leftLinks,
       brand,
       fixed,
-      absolute
+      absolute,
+      home
     } = this.props;
     const appBarClasses = classNames({
       [classes.appBar]: true,
@@ -82,7 +83,7 @@ class Header extends React.Component {
     );
     return (
       <AppBar className={appBarClasses}>
-        <Toolbar className={classes.container}>
+        <Toolbar id={home ? "headCtnr": null } className={classes.container}>
           {leftLinks !== undefined ? brandComponent : null}
           <div className={classes.flex}>
             {leftLinks !== undefined ? (
