@@ -1,6 +1,8 @@
 # PERN-Advanced-Starter
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/), &amp; [Node](https://nodejs.org/en/)
 
+###### Live example: [PERN-Starter](https://pern-starter.herokuapp.com/)
+
 What makes this an advanced starter app you ask? This project folds together several tools that come together for a powerful dev environment and fully functional production application. It also employs an 'advanced' implementation of [pg-promise](http://vitaly-t.github.io/pg-promise/) for interaction with a SQL database.
 
 Here's a list of the other fun bits folded into this project:
@@ -28,10 +30,12 @@ Hop into the project directory and install the dependencies:
 	$ cd PERN-Advanced-Starter
 	$ npm i
 
+
+> ![audit report](./src/assets/img/audit.png)
 > If you have npm v6+ installed you'll notice 0 vulnerabilities are found in
 > the 12,000+ packages being scanned (as of late July 2018).
-> ![](./src/assets/img/audit.png)
 > I'm very proud of that, it wasn't easy! More about npm's new audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
+
 
 To start the Webpack dev server run:
 
