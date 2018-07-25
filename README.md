@@ -44,6 +44,8 @@ And to build for deployment/production run:
 
 Also don't forget that your API won't work unless you create a users table. To do this hit the following routes, either in your browser or with [Postman](https://www.getpostman.com/).
 
+
+
 ## What's happening under the hood
 
 #### Config files you might not recognize:
@@ -54,6 +56,8 @@ _.eslintrc.json_ - This config file tells [ESLint](https://eslint.org/) our sett
 _nodemon.json_ - When Webpack spins up a dev server it also starts [nodemon](https://nodemon.io/) in the background to proxy for api calls. This file tells nodemon which directory to watch for changes and restart when files are updated.
 
 _.webpack.config.js_ - Oh the magic, and let's be honest *heart-burn*, of Webpack! This file gives Webpack all the important details for doing what it does. Again this file is configurable; for more information visit [the configuration docs](https://webpack.js.org/configuration/).
+
+
 
 
 ## How did we get here?
