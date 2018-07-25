@@ -101,3 +101,16 @@
   background-color: #FFFFFF;
   color: #263844;
 }
+
+footer a {
+  font-size: 14px !important;
+}
+
+#thanks {
+  padding-top: 10px;
+}
+
+#thumbup {
+  margin-left: .5em;
+  transform: translateY(5px);
+}

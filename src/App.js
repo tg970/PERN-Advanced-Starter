@@ -1,11 +1,11 @@
 /* eslint "react/prop-types": off */
 
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
 
 import Users from "./components/Users/Users";
 import PageLinks from "./components/PageLinks/PageLinks";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/HomeFooter";
 
 import "./app.css";
 import ReactImage from "./react.png";
@@ -52,6 +52,7 @@ export default class App extends Component {
         </div>
         <Users />
         <PageLinks />
+        <Footer />
       </div>
     );
   }
