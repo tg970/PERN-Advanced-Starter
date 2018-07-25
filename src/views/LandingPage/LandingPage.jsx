@@ -35,6 +35,7 @@ class LandingPage extends React.Component {
           brand="Material Kit React"
           rightLinks={<HeaderLinks />}
           fixed
+          lead
           changeColorOnScroll={{
             height: 400,
             color: "white"

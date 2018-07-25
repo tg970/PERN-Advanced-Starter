@@ -44,6 +44,7 @@ class Components extends React.Component {
             height: 400,
             color: "white"
           }}
+          lead
           {...rest}
         />
         <Parallax image={require("assets/img/bg4.jpg")}>

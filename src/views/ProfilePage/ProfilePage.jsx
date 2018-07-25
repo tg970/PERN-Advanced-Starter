@@ -48,6 +48,7 @@ class ProfilePage extends React.Component {
           brand="Material Kit React"
           rightLinks={<HeaderLinks />}
           fixed
+          lead
           changeColorOnScroll={{
             height: 200,
             color: "white"

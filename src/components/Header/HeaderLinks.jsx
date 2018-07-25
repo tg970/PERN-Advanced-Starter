@@ -106,6 +106,22 @@ function HeaderLinks({ ...props }) {
           <CloudDownload className={classes.icons} /> Download
         </Button>
       </ListItem>
+      {/* <ListItem className={classes.listItem}>
+        <Tooltip
+          id="instagram-tooltip"
+          title="Back to home page"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            color="success"
+            href="/"
+            className={classes.navLink}
+          >
+            HOME
+          </Button>
+        </Tooltip>
+      </ListItem> */}
     </List>
   );
 }

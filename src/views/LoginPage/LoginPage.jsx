@@ -2,6 +2,7 @@ import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
+import Tooltip from "@material-ui/core/Tooltip";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import LockOutline from "@material-ui/icons/LockOutline";
@@ -22,6 +23,7 @@ import CustomInput from "components/CustomInput/CustomInput.jsx";
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
 import image from "assets/img/bg7.jpg";
+import "./LoginStyle.css";
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -44,21 +46,21 @@ class LoginPage extends React.Component {
     const { classes, ...rest } = this.props;
     return (
       <div>
-        <Header
-          absolute
-          color="transparent"
-          brand="Material Kit React"
-          rightLinks={<HeaderLinks />}
-          {...rest}
-        />
         <div
-          className={classes.pageHeader}
+          className={classes.pageHeader, "something"}
           style={{
             backgroundImage: "url(" + image + ")",
             backgroundSize: "cover",
             backgroundPosition: "top center"
           }}
         >
+          <Header
+            lead
+            color="transparent"
+            brand="Material Kit React"
+            rightLinks={<HeaderLinks />}
+            {...rest}
+          />
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={4}>

@@ -13,6 +13,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import Tooltip from "@material-ui/core/Tooltip";
+import CustomButton from "components/CustomButtons/Button.jsx";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
@@ -68,7 +70,8 @@ class Header extends React.Component {
       brand,
       fixed,
       absolute,
-      home
+      home,
+      lead
     } = this.props;
     const appBarClasses = classNames({
       [classes.appBar]: true,
@@ -86,6 +89,23 @@ class Header extends React.Component {
         <Toolbar id={home ? "headCtnr": null } className={classes.container}>
           {leftLinks !== undefined ? brandComponent : null}
           <div className={classes.flex}>
+            {lead ? (
+              <Tooltip
+                title="Back to home page"
+                placement={window.innerWidth > 959 ? "top" : "left"}
+                classes={{ tooltip: classes.tooltip }}
+              >
+                <CustomButton
+                  color="success"
+                  href="/"
+                  className={classes.navLink}
+                >
+                  HOME
+                </CustomButton>
+              </Tooltip>
+            ) : (
+              null
+            )}
             {leftLinks !== undefined ? (
               <Hidden smDown implementation="css">
                 {leftLinks}
