@@ -17,6 +17,8 @@ const styles = (theme) => ({
     padding: '1em',
     marginTop: '1em',
     paddingBottom: '3em',
+    width: '100%',
+    maxWidth: '1020px',
   },
   h2: {
     marginTop: '10px',

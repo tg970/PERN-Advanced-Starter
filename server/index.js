@@ -29,7 +29,7 @@ app.use('/api/products', products);
 
 // test for client comm to server
 app.get('/api/hello', (req, res) => {
-  res.send({ message: "Hello, how are you today?" });
+  res.send({ message: "Hello there!" });
 });
 
 // port listener and happy-happy report

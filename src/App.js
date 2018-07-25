@@ -50,8 +50,10 @@ export default class App extends Component {
             </h1>
           )}
         </div>
-        <Users />
-        <PageLinks />
+        <div className="sectionWrap">
+          <Users />
+          <PageLinks />
+        </div>
         <Footer />
       </div>
     );
