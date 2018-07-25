@@ -77,12 +77,12 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     });
     const brandComponent = (
-      <Button className={classes.title}>
+      <Button id={home ? "homeLogo": null } className={classes.title}>
         {brand}
       </Button>
     );
     return (
-      <AppBar className={appBarClasses}>
+      <AppBar id={home ? "homeHeader": null } className={appBarClasses}>
         <Toolbar id={home ? "headCtnr": null } className={classes.container}>
           {leftLinks !== undefined ? brandComponent : null}
           <div className={classes.flex}>

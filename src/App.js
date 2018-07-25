@@ -31,7 +31,6 @@ export default class App extends Component {
         <Header
           brand="PERN Starter App"
           fixed
-          color="dark"
           changeColorOnScroll={{
             height: 400,
             color: "white"
@@ -53,31 +52,6 @@ export default class App extends Component {
         </div>
         <Users />
         <PageLinks />
-        <h2>
-          Check out these pages:
-        </h2>
-        <ul>
-          <li>
-            <Link className="homeLink" to="/components">
-              Components
-            </Link>
-          </li>
-          <li>
-            <Link className="homeLink" to="/login">
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link className="homeLink" to="/landing">
-              Landing
-            </Link>
-          </li>
-          <li>
-            <Link className="homeLink" to="/profile">
-              Profile
-            </Link>
-          </li>
-        </ul>
       </div>
     );
   }
