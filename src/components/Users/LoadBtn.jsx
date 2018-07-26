@@ -30,7 +30,6 @@ class ConnectedLoadBtn extends Component {
   handleClick() {
     axios.get('/api/users/all')
       .then((response) => {
-        console.log(response);
         response.data.forEach((user) => {
           for (let i of this.props.users) {
             if (user.id === i.id) return;

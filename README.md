@@ -6,12 +6,13 @@ The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://ex
 What makes this an advanced starter app you ask? This project folds together several tools that come together for a powerful dev environment and fully functional production application. It also employs an 'advanced' implementation of [pg-promise](http://vitaly-t.github.io/pg-promise/) for interaction with a SQL database.
 
 Here's a list of the other fun bits folded into this project:
-- [ESLint](https://eslint.org/): Styleguide, syntax, and developer error finder and enforcer.
+- [ESLint](https://eslint.org/): Styleguide, syntax, and developer error finder and enforcer
 - [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
 - [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
-- [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client.
+- [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
 - [React Material UI](https://material-ui.com/): Component library implementing Google's [Material Design](https://material.io/)
-- [Material-UI Kit](https://www.creative-tim.com/product/material-kit-react): Curated mid-level component library complete with view examples.
+- [Material-UI Kit](https://www.creative-tim.com/product/material-kit-react): Curated mid-level component library complete with view examples
+- [Axios](https://github.com/axios/axios): Promise based HTTP client for the browser and node.js
 
 ## Using this project
 
