@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React, { Component } from "react";
+import axios from 'axios';
 import { connect } from "react-redux";
 import { addUser } from "store/actions/index";
 
@@ -27,24 +28,15 @@ class ConnectedForm extends Component {
     this.setState({ [event.target.id]: event.target.value });
   }
 
-  postData(url = ``, data = {}) {
-    return fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json; charset=utf-8"
-        },
-        body: JSON.stringify(data)
-    })
-    .then((response) => {return response.json()}) // parses response to JSON
-    .catch(error => console.error(`Fetch Error =\n`, error));
-  }
-
   handleSubmit(event) {
     event.preventDefault();
     const data = this.state;
-    this.postData(`/api/users/add`, data)
+    axios.post('/api/users/add', data)
       .then((response) => {
-        this.props.addUser(response);
+        this.props.addUser(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
     this.setState({ name: "" });
   }

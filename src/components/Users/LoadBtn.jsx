@@ -2,6 +2,7 @@
  "no-restricted-syntax": off, "prefer-const": off */
 
 import React, { Component } from "react";
+import axios from 'axios';
 import { connect } from "react-redux";
 import { addUser } from "store/actions/index";
 
@@ -27,16 +28,19 @@ class ConnectedLoadBtn extends Component {
   }
 
   handleClick() {
-    fetch('/api/users/all')
-      .then(res => res.json())
-      .then((data) => {
-        data.forEach((user) => {
+    axios.get('/api/users/all')
+      .then((response) => {
+        console.log(response);
+        response.data.forEach((user) => {
           for (let i of this.props.users) {
             if (user.id === i.id) return;
           }
           this.props.addUser(user);
         });
         this.setState({ loaded: true });
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }
 
