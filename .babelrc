@@ -3,10 +3,6 @@
   "plugins": [
     "transform-class-properties",
     "transform-object-rest-spread",
-    "transform-react-jsx",
-    "security"
-  ],
-  "extends": [
-    "plugin:security/recommended"
+    "transform-react-jsx"
   ]
 }

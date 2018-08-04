@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 const express = require('express');
+const RateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -9,11 +10,20 @@ const app = express();
 
 // config
 const PORT = process.env.PORT || 3000;
+app.enable('trust proxy');
+
+// rate limit config
+var apiLimiter = new RateLimit({
+  windowMs: 15*60*1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests
+  delayMs: 0 // disabled until limit is met
+});
 
 // middleware
-app.use(morgan('tiny'));
-app.use(helmet());
-app.use(cors());
+app.use('/api/', apiLimiter); // activate limiter for api calls only
+app.use(morgan('tiny')); // server logger
+app.use(helmet()); // header security
+app.use(cors()); // cross origin resources
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

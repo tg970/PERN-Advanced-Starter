@@ -1,5 +1,11 @@
 {
-  "extends": ["airbnb"],
+  "extends": [
+    "airbnb",
+    "plugin:security/recommended"
+  ],
+  "plugins": [
+    "security"
+  ],
   "env": {
     "browser": true,
     "node": true
