@@ -25,7 +25,7 @@ app.use(morgan('tiny')); // server logger
 app.use(helmet()); // header security
 app.use(cors()); // cross origin resources
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(express.json({ limit: '300kb' }));
 
 // serve static/build files
 app.use(express.static('dist'));
