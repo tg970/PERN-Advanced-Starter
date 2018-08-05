@@ -3,10 +3,10 @@ The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://ex
 
 ###### Live example: [PERN-Starter](https://pern-starter.herokuapp.com/)
 
-What makes this an advanced starter app you ask? This project folds together several tools that come together for a powerful dev environment and fully functional production application. It also employs an 'advanced' implementation of [pg-promise](http://vitaly-t.github.io/pg-promise/) for interaction with a SQL database.
+What makes this an advanced starter app you ask? This project folds together several tools that come together for a powerful dev environment and good start for a fully functional production application. It employs an 'advanced' implementation of [pg-promise](http://vitaly-t.github.io/pg-promise/) for interaction with a SQL database with additional basic security concerns added to the [Express](https://expressjs.com/) server.
 
 Here's a list of the other fun bits folded into this project:
-- [ESLint](https://eslint.org/): Styleguide, syntax, and developer error finder and enforcer
+- [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
 - [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
 - [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
 - [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
@@ -33,9 +33,7 @@ Hop into the project directory and install the dependencies:
 
 
 > ![audit report](./src/assets/img/audit.png)
-> If you have npm v6+ installed you'll notice 0 vulnerabilities are found in
-> the 12,000+ packages being scanned (as of late July 2018).
-> I'm very proud of that, it wasn't easy! More about npm's new audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
+> If you have npm v6+ installed you'll notice 0 vulnerabilities are found. I'm very proud of that, it wasn't easy! More about npm's new audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
 
 To start the Webpack dev server run:
@@ -47,11 +45,30 @@ And to build for deployment/production run:
 	$ npm run build
 	$ npm start
 
-Also don't forget that your API won't work unless you create a users table. To do this hit the following routes, either in your browser or with [Postman](https://www.getpostman.com/).
+Also don't forget that your API won't work unless you create a users table.
 
+> Does this look familiar?
+> ![no tables](./src/assets/img/newdb.png)
 
+To do this hit the following route, either in your browser or with [Postman](https://www.getpostman.com/).
+
+http://localhost:3000/api/users/create  
+
+> Successful return:
+> ![null](./src/assets/img/null.png)
+
+If you want to seed use:
+
+http://localhost:3000/api/users/init
+
+>  Successful return:
+>![id's](./src/assets/img/ids.png)
+
+And if you don't have it: [json formatter for chrome.](https://github.com/callumlocke/json-formatter)
 
 ## What's happening under the hood
+
+#### pg-promise: [Read up on it.](https://github.com/vitaly-t/pg-promise)
 
 #### Config files you might not recognize:
 _.babelrc_ - [Babel](https://babeljs.io/) is a toolchain used by Webpack to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript for old browsers or environments. This file tells Babel our presets and plugins.
