@@ -22,9 +22,15 @@ Open a terminal window and create a new PG database:
 
 	$ createdb PERN-Starter
 
-Then to get going using this starter app, first clone the repo:
+Then to get going using this starter app, first fork the repo:
 
-    $ git clone https://github.com/tg970/PERN-Advanced-Starter.git
+![fork](./src/assets/img/fork.png)
+
+Then clone the fork to your local machine:
+
+  $ git clone https://github.com/*YOUR-USERNAME-HERE*/PERN-Advanced-Starter.git
+
+> Why fork? This way you can make your own changes, save them to github, and even share them with the main fork :)
 
 Hop into the project directory and install the dependencies:
 
@@ -33,7 +39,7 @@ Hop into the project directory and install the dependencies:
 
 
 > ![audit report](./src/assets/img/audit.png)
-> If you have npm v6+ installed you'll notice 0 vulnerabilities are found. I'm very proud of that, it wasn't easy! More about npm's new audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
+> If you have npm v6+ installed you'll notice 0 vulnerabilities are found. I'm very proud of that, it wasn't easy! More about npm's new(-ish) audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
 
 To start the Webpack dev server run:
