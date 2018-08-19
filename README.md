@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/tg970/PERN-Advanced-Starter/badge.svg)](https://snyk.io/test/github/tg970/PERN-Advanced-Starter)
+
 # PERN-Advanced-Starter
 The PERN stack: [PostgresSQL](https://www.postgresql.org/), [Express](https://expressjs.com/), [React](https://reactjs.org/), &amp; [Node](https://nodejs.org/en/)
 
