@@ -32,7 +32,7 @@ Then clone the fork to your local machine:
 
   $ git clone https://github.com/*YOUR-USERNAME-HERE*/PERN-Advanced-Starter.git
 
-> Why fork? This way you can make your own changes, save them to github, and even share them with the main fork :)
+> **Why fork?** That way you can make your own changes, save them to github, and even share them with the main fork.
 
 Hop into the project directory and install the dependencies:
 
@@ -41,7 +41,8 @@ Hop into the project directory and install the dependencies:
 
 
 > ![audit report](./src/assets/img/Audit_2019-04-12.png)
-> If you have npm v6+ installed you'll notice 0 vulnerabilities are found. This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
+> If you have npm v6+ installed and notice there were more than 0 vulnerabilities are found, run: npm audit fix
+> This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
 
 To start the Webpack dev server run:
