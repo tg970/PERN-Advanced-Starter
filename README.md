@@ -41,7 +41,7 @@ Hop into the project directory and install the dependencies:
 
 
 > ![audit report](./src/assets/img/Audit_2019-04-12.png)
-> If you have npm v6+ installed you'll notice 0 vulnerabilities are found. I'm very proud of that, it wasn't easy! More about npm's new(-ish) audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
+> If you have npm v6+ installed you'll notice 0 vulnerabilities are found. This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
 
 To start the Webpack dev server run:
