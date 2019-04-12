@@ -12,10 +12,10 @@ GET('/create', () => db.users.create());
 GET('/init', () => db.users.init());
 
 // remove all records from the table:
-//GET('/empty', () => db.users.empty());
+GET('/empty', () => db.users.empty());
 
 // drop the table:
-GET('/drop', () => db.users.drop());
+// GET('/drop', () => db.users.drop());
 
 // add a new user, if it doesn't exist yet, and return the object:
 POST('/add', req => {
