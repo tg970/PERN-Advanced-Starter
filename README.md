@@ -40,7 +40,7 @@ Hop into the project directory and install the dependencies:
 	$ npm i
 
 
-> ![audit report](./src/assets/img/audit.png)
+> ![audit report](./src/assets/img/Audit_2019_04-19.png)
 > If you have npm v6+ installed you'll notice 0 vulnerabilities are found. I'm very proud of that, it wasn't easy! More about npm's new(-ish) audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
 
