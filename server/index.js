@@ -5,8 +5,13 @@ const RateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const cors = require('cors');
 const morgan = require('morgan');
-const db = require('./db');
 const app = express();
+
+// Set env variables in dev env
+if (app.get('env') == 'development') require('dotenv').config();
+
+// Import DB
+const db = require('./db');
 
 // config
 const PORT = process.env.PORT || 3000;
