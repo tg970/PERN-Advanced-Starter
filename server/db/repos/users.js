@@ -37,7 +37,7 @@ class UsersRepository {
 
   // Initializes the table with some user records, and return their id-s;
   async init() {
-    let count = await this.db.one('SELECT count(*) FROM users', [], a => +a.count);
+    const count = await this.db.one('SELECT count(*) FROM users', [], a => +a.count);
     if (count > 0) {
       return null
     }
