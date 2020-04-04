@@ -4,7 +4,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 // @material-ui/icons
 import People from "@material-ui/icons/People";
-import LockOutline from "@material-ui/icons/LockOutline";
+import LockOutline from "@material-ui/icons/Lock";
 import Email from "@material-ui/icons/Email";
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";

@@ -21,10 +21,10 @@ const Root = ({ store }) => (
     <Router>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/components" component={Components} />
-        <Route path="/landing" component={LandingPage} />
-        <Route path="/profile" component={ProfilePage} />
+        // <Route path="/login" component={LoginPage} />
+        // <Route path="/components" component={Components} />
+        // <Route path="/landing" component={LandingPage} />
+        // <Route path="/profile" component={ProfilePage} />
       </Switch>
     </Router>
   </Provider>

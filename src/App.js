@@ -1,6 +1,7 @@
-/* eslint "react/prop-types": off */
+/* eslint-disable */
 
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Users from "./components/Users/Users";
 import PageLinks from "./components/PageLinks/PageLinks";
@@ -10,7 +11,7 @@ import Footer from "./components/Footer/HomeFooter";
 import "./app.css";
 import ReactImage from "./react.png";
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = { greeting: null };
@@ -59,3 +60,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App

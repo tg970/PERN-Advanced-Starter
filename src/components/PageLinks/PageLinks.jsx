@@ -48,7 +48,7 @@ class PageLinks extends Component {
         <h2 className="pageLinkHeader" >
           Check out these pages
         </h2>
-        <GridContainer spacing={24} >
+        <GridContainer >
           <GridItem className={classes.card, 'card' } xs={12} sm={12} md={6}>
             <Link id="componentsCard" className="cardLink" to="/components">
               <LineStyle className={classes.icon}/>

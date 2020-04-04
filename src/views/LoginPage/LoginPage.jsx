@@ -5,7 +5,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Tooltip from "@material-ui/core/Tooltip";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
-import LockOutline from "@material-ui/icons/LockOutline";
+import LockOutline from "@material-ui/icons/Lock";
 import People from "@material-ui/icons/People";
 // core components
 import Header from "components/Header/Header.jsx";

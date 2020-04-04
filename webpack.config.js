@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const outputDirectory = "dist";
 
@@ -35,14 +35,15 @@ module.exports = {
   },
   devServer: {
     port: 3001,
-    open: true,
+    // open: true,
+    stats: 'minimal',
     historyApiFallback: true,
     proxy: {
       "/api": "http://localhost:3000"
     }
   },
   plugins: [
-    new CleanWebpackPlugin([outputDirectory]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/favicon.ico"
