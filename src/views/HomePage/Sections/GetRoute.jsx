@@ -35,7 +35,7 @@ function WorkSection(props) {
   const [showLoading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (!props.users.length) {
+    if (!props.users.length && !showLoading) {
       setLoading(true);
       axios.get('/api/users/all')
         .then((response) => {
@@ -47,7 +47,7 @@ function WorkSection(props) {
         });
     }
   });
-  
+
   return (
     <div className={classes.section}>
       <h4 className={classes.title}><u>Get Data</u></h4>

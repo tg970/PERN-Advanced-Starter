@@ -26,7 +26,7 @@ Open a terminal window and create a new PG database:
 
 Then to get going using this starter app, first fork the repo:
 
-![fork](./src/assets/img/fork.png)
+![fork](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/fork.png)
 
 Then clone the fork to your local machine:
 
@@ -40,7 +40,7 @@ Hop into the project directory and install the dependencies:
 	$ npm i
 
 
-> ![audit report](./src/assets/img/Audit_2019-04-12.png)
+> ![audit report](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/Audit_2019-04-12.png)
 > If you have npm v6+ installed and notice there were more than 0 vulnerabilities are found, run: `npm audit fix`
 
 This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
@@ -58,21 +58,21 @@ And to build for deployment/production run:
 Also don't forget that your API won't work unless you create a users table.
 
 > Does this look familiar?
-> ![no tables](./src/assets/img/newdb.png)
+> ![no tables](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/newdb.png)
 
 To do this hit the following route, either in your browser or with [Postman](https://www.getpostman.com/).
 
 http://localhost:3000/api/users/create  
 
 > Successful return:
-> ![null](./src/assets/img/null.png)
+> ![null](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/null.png)
 
 If you want to seed use:
 
 http://localhost:3000/api/users/init
 
 >  Successful return:
->![id's](./src/assets/img/ids.png)
+>![id's](https://raw.githubusercontent.com/tg970/PERN-Advanced-Starter/master/src/assets/img/ids.png)
 
 And if you don't have it: [json formatter for chrome.](https://github.com/callumlocke/json-formatter)
 

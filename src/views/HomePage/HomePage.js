@@ -21,6 +21,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import IntroSection from "./Sections/IntroSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 import Examples from "./Sections/Examples.js";
+import Readme from "./Sections/Readme.js";
 
 import homeBg from "assets/img/sign.jpg";
 
@@ -68,6 +69,7 @@ export default function HomePage(props) {
           <IntroSection />
           <WorkSection />
           <Examples />
+          <Readme />
         </div>
       </div>
 
