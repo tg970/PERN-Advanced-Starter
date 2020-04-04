@@ -1,5 +1,6 @@
 import {
   primaryColor,
+  successColor,
   dangerColor,
   roseColor,
   grayColor
@@ -166,10 +167,10 @@ const customCheckboxRadioSwitch = {
   },
   switchChecked: {
     "& + $switchBar": {
-      backgroundColor: "rgba(156, 39, 176, 1) !important"
+      backgroundColor: `${successColor} !important`
     },
     "& $switchIcon": {
-      borderColor: "#9c27b0"
+      borderColor: successColor
     }
   },
   switchRoot: {

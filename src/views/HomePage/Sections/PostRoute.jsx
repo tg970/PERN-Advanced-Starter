@@ -6,6 +6,8 @@ import { addUser } from "store/actions/index";
 import axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Switch from "@material-ui/core/Switch";
 
 // @material-ui/icons
 
@@ -15,7 +17,9 @@ import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
-import { title } from "assets/jss/material-kit-react.js"
+
+import { title } from "assets/jss/material-kit-react.js";
+import customCheckboxRadioSwitch from "assets/jss/material-kit-react/customCheckboxRadioSwitch.js";
 
 const styles = {
   textCenter: {
@@ -25,6 +29,10 @@ const styles = {
     ...title,
     // color: grayColor,
   },
+  tacoSwitch: {
+    display: 'flex',
+  },
+  ...customCheckboxRadioSwitch,
 };
 
 const useStyles = makeStyles(styles);
@@ -69,32 +77,59 @@ function PostRoute(props) {
   return (
     <form>
       <h4 className={classes.title}><u>Post New Data</u></h4>
-      <CustomInput
-        labelText="User Name"
-        id="name"
-        formControlProps={{
-          fullWidth: true,
-        }}
-        inputProps={{
-          onChange,
-          value: data.name,
-        }}
-      />
-      <CustomInput
-        labelText="Message"
-        id="message"
-        formControlProps={{
-          fullWidth: true,
-          className: classes.textArea,
+      <GridContainer >
+        <GridItem xs={12} sm={9}>
+          <CustomInput
+            labelText="User Name"
+            id="name"
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              onChange,
+              value: data.name,
+            }}
+          />
+        </GridItem>
+        <GridItem xs={12} sm={3} className={classes.tacoSwitch}>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={data.tacos}
+                onChange={() => onChangeSwitch('tacos')}
+                value={data.tacos}
+                classes={{
+                  switchBase: classes.switchBase,
+                  checked: classes.switchChecked,
+                  thumb: classes.switchIcon,
+                  track: classes.switchBar
+                }}
+              />
+            }
+            classes={{
+              label: classes.label
+            }}
+            label="Tacos"
+          />
+        </GridItem>
+        <GridItem xs={12} sm={12} >
+        <CustomInput
+          labelText="Message"
+          id="message"
+          formControlProps={{
+            fullWidth: true,
+            className: classes.textArea,
 
-        }}
-        inputProps={{
-          multiline: true,
-          rows: 3,
-          onChange,
-          value: data.message,
-        }}
-      />
+          }}
+          inputProps={{
+            multiline: true,
+            rows: 3,
+            onChange,
+            value: data.message,
+          }}
+          />
+        </GridItem>
+      </GridContainer>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} className={classes.textCenter}>
           <Button onClick={onSubmit} color="primary">Add User</Button>
