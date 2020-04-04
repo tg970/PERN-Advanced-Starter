@@ -32,7 +32,7 @@ class UsersRepository {
 
   // Creates the table;
   async create() {
-    const drop = await this.drop();
+    // const drop = await this.drop();
     const create = await this.db.none(sql.create);
     return this.init();
   }
@@ -46,15 +46,15 @@ class UsersRepository {
     return this.db.result(sql.init, [], result => result.rows);
   }
 
-  // Drops the table;
-  drop() {
-    return this.db.none(sql.drop);
-  }
-
-  // Removes all records from the table;
-  empty() {
-    return this.db.none(sql.empty);
-  }
+  // // Drops the table;
+  // drop() {
+  //   return this.db.none(sql.drop);
+  // }
+  //
+  // // Removes all records from the table;
+  // empty() {
+  //   return this.db.none(sql.empty);
+  // }
 
   // Adds a new user, and returns the new object;
   add(values) {
