@@ -1,6 +1,9 @@
 /* eslint-disable */
 
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { addUser } from "store/actions/index";
+import axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -20,8 +23,10 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function WorkSection() {
+function PostRoute(props) {
   const classes = useStyles();
+
+  const { addUser } = props;
 
   const defultForm = {
     name: "",
@@ -34,12 +39,15 @@ export default function WorkSection() {
 
   function onSubmit() {
     setLoading(true);
-    console.log(data);
-    // network.post("sections", data, (newData) => {
-    //   setLoading(false);
-    //   if (newData) setData(defultForm);
-    //   if (newData.project) swapProject(newData.project); //Need to get something from the server here
-    // }, true)
+    axios.post('/api/users/add', data)
+      .then((response) => {
+        props.addUser(response.data);
+        setData(defultForm)
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   function onChange(event) {
@@ -82,9 +90,19 @@ export default function WorkSection() {
       />
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} className={classes.textCenter}>
-          <Button onClick={onSubmit} color="primary">Send Message</Button>
+          <Button onClick={onSubmit} color="primary">Add User</Button>
         </GridItem>
       </GridContainer>
     </form>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addUser: user => dispatch(addUser(user))
+  };
+};
+
+const PostRouteConn = connect(null, mapDispatchToProps)(PostRoute);
+
+export default PostRouteConn

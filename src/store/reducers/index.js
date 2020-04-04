@@ -8,7 +8,8 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_USER:
-      if (typeof action.payload === 'object') {
+      console.log(typeof action.payload);
+      if (!action.payload.length) {
         return {
           ...state,
           users: [

@@ -57,7 +57,8 @@ class UsersRepository {
   // Adds a new user, and returns the new object;
   add(values) {
     return this.db.one(sql.add, {
-      name: values.name
+      name: values.name,
+      message: values.message,
     });
   }
 
