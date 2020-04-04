@@ -96,7 +96,7 @@ export default function HeaderLinks(props) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://github.com/tg970"
+            href="https://github.com/tg970/PERN-Advanced-Starter"
             color="transparent"
             className={classes.navLink}
           >

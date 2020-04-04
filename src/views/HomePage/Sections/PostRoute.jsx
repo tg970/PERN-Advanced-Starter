@@ -15,10 +15,16 @@ import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
+import { title } from "assets/jss/material-kit-react.js"
+
 const styles = {
   textCenter: {
     textAlign: 'center',
-  }
+  },
+  title: {
+    ...title,
+    // color: grayColor,
+  },
 };
 
 const useStyles = makeStyles(styles);
@@ -62,6 +68,7 @@ function PostRoute(props) {
 
   return (
     <form>
+      <h4 className={classes.title}><u>Post New Data</u></h4>
       <CustomInput
         labelText="User Name"
         id="name"

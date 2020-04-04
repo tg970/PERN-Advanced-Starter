@@ -6,12 +6,23 @@ import { addUser } from "store/actions/index";
 import axios from 'axios';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-// @material-ui/icons
+import { title, primaryColor, grayColor } from "assets/jss/material-kit-react.js"
 
 const styles = {
+  title,
   section: {
-    color: 'black',
+    color: grayColor,
+    paddingLeft: "50px",
+  },
+  loadingWrap: {
+    paddingTop: '75px',
+    paddingLeft: '25px',
+    color: primaryColor,
+  },
+  listWrap: {
+    paddingTop: '10px',
   }
 };
 
@@ -25,11 +36,11 @@ function WorkSection(props) {
 
   useEffect(() => {
     if (!props.users.length) {
+      setLoading(true);
       axios.get('/api/users/all')
         .then((response) => {
-          console.log(response);
+          setLoading(false);
           addUser(response.data);
-          // this.setState({ loaded: true });
         })
         .catch((error) => {
           console.log(error);
@@ -39,13 +50,21 @@ function WorkSection(props) {
   console.log(users);
   return (
     <div className={classes.section}>
-      <ul>
-        {users && users.map((item, ind) => {
-          return (
-            <li key={ind}>{item.name}</li>
-          )
-        })}
-      </ul>
+      <h4 className={classes.title}><u>Get Data</u></h4>
+      {showLoading ?
+        <div className={classes.loadingWrap}>
+          <CircularProgress color={"inherit"} />
+        </div>
+        :
+        <ul className={classes.listWrap}>
+          {users && users.map((item, ind) => {
+            return (
+              <li key={ind}>{item.name}</li>
+            )
+          })}
+        </ul>
+      }
+
     </div>
   );
 }

@@ -30,7 +30,7 @@ Then to get going using this starter app, first fork the repo:
 
 Then clone the fork to your local machine:
 
-  $ git clone `https://github.com/*YOUR-USERNAME-HERE*/PERN-Advanced-Starter.git`
+  `$ git clone https://github.com/*YOUR-USERNAME-HERE*/PERN-Advanced-Starter.git`
 
 > **Why fork?** That way you can make your own changes, save them to github, and even share them with the main fork.
 
@@ -41,8 +41,9 @@ Hop into the project directory and install the dependencies:
 
 
 > ![audit report](./src/assets/img/Audit_2019-04-12.png)
-> If you have npm v6+ installed and notice there were more than 0 vulnerabilities are found, run: npm audit fix
-> This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
+> If you have npm v6+ installed and notice there were more than 0 vulnerabilities are found, run: `npm audit fix`
+
+This is a constant battle: check your dependencies regularly and update them. More about npm's audit functionality [here](https://docs.npmjs.com/getting-started/running-a-security-audit).
 
 
 To start the Webpack dev server run:
@@ -79,14 +80,14 @@ And if you don't have it: [json formatter for chrome.](https://github.com/callum
 
 #### pg-promise: [Read up on it.](https://github.com/vitaly-t/pg-promise)
 
-#### Config files you might not recognize:
+#### Other Config files:
 _.babelrc_ - [Babel](https://babeljs.io/) is a toolchain used by Webpack to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript for old browsers or environments. This file tells Babel our presets and plugins.
 
 _.eslintrc.json_ - This config file tells [ESLint](https://eslint.org/) our settings for interpreting and reporting errors and warnings while we're writing our code. Delete or add rules, change style guide, whatever you want, this is where you do it. For this to work you'll need to make sure you have a linter and eslint installed in your code editor.  
 
 _nodemon.json_ - When Webpack spins up a dev server it also starts [nodemon](https://nodemon.io/) in the background to proxy for api calls. This file tells nodemon which directory to watch for changes and restart when files are updated.
 
-_.webpack.config.js_ - Oh the magic, and let's be honest *heart-burn*, of Webpack! This file gives Webpack all the important details for doing what it does. Again this file is configurable; for more information visit [the configuration docs](https://webpack.js.org/configuration/).
+_.webpack.config.js_ - Oh the magic of Webpack! This file gives Webpack all the important details for doing what it does. Again this file is configurable; for more information visit [the configuration docs](https://webpack.js.org/configuration/).
 
 
 

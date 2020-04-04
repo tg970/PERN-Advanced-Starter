@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Advanced PERN stack starter app",
   "engines": {
-    "npm": "6.4.0",
-    "node": "10.8.0"
+    "npm": "6.13.1",
+    "node": "13.3.0"
   },
   "main": "server/index.js",
   "scripts": {
