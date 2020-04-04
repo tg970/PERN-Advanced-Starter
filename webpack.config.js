@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const outputDirectory = "dist";
 
@@ -20,13 +20,21 @@ module.exports = {
         }
       },
       {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/,
         loader: "url-loader?limit=100000"
-      }
+      },
+      {
+        test: /\.(txt|md)$/,
+        use: 'raw-loader',
+      },
     ]
   },
   resolve: {
@@ -35,14 +43,15 @@ module.exports = {
   },
   devServer: {
     port: 3001,
-    open: true,
+    // open: true,
+    stats: 'minimal',
     historyApiFallback: true,
     proxy: {
       "/api": "http://localhost:3000"
     }
   },
   plugins: [
-    new CleanWebpackPlugin([outputDirectory]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/favicon.ico"

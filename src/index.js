@@ -1,11 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
 import store from "./store/index";
-import Root from './Root';
+import App from './App';
 
-window.store = store;
+// Easy access to the redux store for dev
+// window.store = store;
 
 render(
-  <Root store={store} />,
+  <App store={store} />,
   document.getElementById("root")
 );

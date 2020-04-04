@@ -1,0 +1,21 @@
+.intro-info-section {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 15px;
+}
+
+.intro-img {
+  height: 150px;
+}
+
+/* .intro-express {
+  transform: translateY(-40px);
+}
+
+.intro-node {
+  transform: translateY(-80px);
+} */

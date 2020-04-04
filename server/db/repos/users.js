@@ -31,19 +31,25 @@ class UsersRepository {
   }
 
   // Creates the table;
-  create() {
-    return this.db.none(sql.create);
+  async create() {
+    const drop = await this.drop();
+    const create = await this.db.none(sql.create);
+    return this.init();
   }
 
   // Initializes the table with some user records, and return their id-s;
-  init() {
-    return this.db.map(sql.init, [], row => row.id);
+  async init() {
+    const count = await this.db.one('SELECT count(*) FROM users', [], a => +a.count);
+    if (count > 0) {
+      return null
+    }
+    return this.db.result(sql.init, [], result => result.rows);
   }
 
   // Drops the table;
-  // drop() {
-  //   return this.db.none(sql.drop);
-  // }
+  drop() {
+    return this.db.none(sql.drop);
+  }
 
   // Removes all records from the table;
   empty() {
@@ -53,7 +59,9 @@ class UsersRepository {
   // Adds a new user, and returns the new object;
   add(values) {
     return this.db.one(sql.add, {
-      name: values.name
+      name: values.name,
+      message: values.message,
+      tacos: values.tacos,
     });
   }
 

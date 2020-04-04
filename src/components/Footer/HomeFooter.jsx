@@ -9,7 +9,7 @@ import { List, ListItem, withStyles } from "@material-ui/core";
 // @material-ui/icons
 import ThumbUp from "@material-ui/icons/ThumbUp";
 
-import footerStyle from "assets/jss/material-kit-react/components/footerStyle.jsx";
+import footerStyle from "assets/jss/material-kit-react/components/footerStyle.js";
 
 function Footer({ ...props }) {
   const { classes, whiteFont } = props;
@@ -30,7 +30,6 @@ function Footer({ ...props }) {
               <a
                 href="https://www.tylergoodman.com/"
                 className={classes.block}
-                target="_blank"
               >
                 T. Goodman
               </a>
@@ -39,7 +38,6 @@ function Footer({ ...props }) {
               <a
                 href="https://github.com/tg970"
                 className={classes.block}
-                target="_blank"
               >
                 <i className="fab fa-github-square"></i>
               </a>
@@ -48,7 +46,6 @@ function Footer({ ...props }) {
               <a
                 href="https://www.linkedin.com/in/thetylergoodman/"
                 className={classes.block}
-                target="_blank"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
@@ -57,7 +54,7 @@ function Footer({ ...props }) {
         </div>
         <div id="thanks" className={classes.right}>
           Thanks for stopping by
-          <ThumbUp id="thumbup" />
+          <ThumbUp id="thumbup" style={{ paddingLeft: '5px' }}/>
         </div>
       </div>
     </footer>

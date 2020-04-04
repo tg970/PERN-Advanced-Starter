@@ -15,7 +15,7 @@ GET('/init', () => db.users.init());
 GET('/empty', () => db.users.empty());
 
 // drop the table:
-// GET('/drop', () => db.users.drop());
+GET('/drop', () => db.users.drop());
 
 // add a new user, if it doesn't exist yet, and return the object:
 POST('/add', req => {
@@ -54,7 +54,7 @@ function GET(url, handler) {
 
 function POST(url, handler) {
   router.post(url, async (req, res) => {
-    console.log('Request body: ', req.body);
+    // console.log('Request body: ', req.body);
     try {
       let data = await handler(req);
       res.status(200).json(data);
