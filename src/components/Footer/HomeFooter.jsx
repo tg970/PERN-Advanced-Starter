@@ -54,7 +54,7 @@ function Footer({ ...props }) {
         </div>
         <div id="thanks" className={classes.right}>
           Thanks for stopping by
-          <ThumbUp id="thumbup" style={{ paddingRight: '5px' }}/>
+          <ThumbUp id="thumbup" style={{ paddingLeft: '5px' }}/>
         </div>
       </div>
     </footer>

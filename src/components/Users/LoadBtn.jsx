@@ -6,7 +6,7 @@ import axios from 'axios';
 import { connect } from "react-redux";
 import { addUser } from "store/actions/index";
 
-import Button from "components/CustomButtons/Button.jsx";
+import Button from "components/CustomButtons/Button.js";
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -30,6 +30,7 @@ class ConnectedLoadBtn extends Component {
   handleClick() {
     axios.get('/api/users/all')
       .then((response) => {
+        console.log(response);
         response.data.forEach((user) => {
           for (let i of this.props.users) {
             if (user.id === i.id) return;

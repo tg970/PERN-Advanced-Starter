@@ -20,4 +20,4 @@ INSERT INTO ${schema~}.users(name) VALUES
 ('Demo User 3'), -- user 3;
 ('Demo User 4'), -- user 4;
 ('Demo User 5') -- user 5;
-RETURNING id
+RETURNING *

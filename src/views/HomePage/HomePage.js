@@ -18,8 +18,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
+import IntroSection from "./Sections/IntroSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 
 import homeBg from "assets/img/sign.jpg";
@@ -65,8 +64,7 @@ export default function HomePage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container} id="section-scroll">
-          <ProductSection />
-          <TeamSection />
+          <IntroSection />
           <WorkSection />
         </div>
       </div>

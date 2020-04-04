@@ -30,7 +30,7 @@ Then to get going using this starter app, first fork the repo:
 
 Then clone the fork to your local machine:
 
-  $ git clone https://github.com/*YOUR-USERNAME-HERE*/PERN-Advanced-Starter.git
+  $ git clone `https://github.com/*YOUR-USERNAME-HERE*/PERN-Advanced-Starter.git`
 
 > **Why fork?** That way you can make your own changes, save them to github, and even share them with the main fork.
 

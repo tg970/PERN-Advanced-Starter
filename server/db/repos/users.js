@@ -36,14 +36,18 @@ class UsersRepository {
   }
 
   // Initializes the table with some user records, and return their id-s;
-  init() {
-    return this.db.map(sql.init, [], row => row.id);
+  async init() {
+    let count = await this.db.one('SELECT count(*) FROM users', [], a => +a.count);
+    if (count > 0) {
+      return null
+    }
+    return this.db.result(sql.init, [], result => result.rows);
   }
 
   // Drops the table;
-  // drop() {
-  //   return this.db.none(sql.drop);
-  // }
+  drop() {
+    return this.db.none(sql.drop);
+  }
 
   // Removes all records from the table;
   empty() {
