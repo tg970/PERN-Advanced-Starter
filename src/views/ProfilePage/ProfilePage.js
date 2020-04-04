@@ -197,6 +197,7 @@ export default function ProfilePage(props) {
             </GridContainer>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

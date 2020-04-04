@@ -63,6 +63,7 @@ export default function LandingPage(props) {
           <TeamSection />
           <WorkSection />
         </div>
+        <Footer />
       </div>
     </div>
   );
