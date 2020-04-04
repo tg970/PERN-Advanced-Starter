@@ -32,7 +32,8 @@ const config = {
   host: 'localhost',
   port: 5432,
   database: 'PERN-Starter',
-  user: 'postgres'
+  user: 'postgres',
+  password: process.env.db_password
 };
 
 // Load and initialize pg-promise:

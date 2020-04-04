@@ -37,7 +37,7 @@ class SecRedux extends Component {
         elevation={5}
       >
         <h2 className={this.props.classes.h2}>
-          Proof of concept for PG-API and Redux
+          Example of post and get API routes:
         </h2>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
