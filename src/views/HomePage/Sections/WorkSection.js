@@ -9,7 +9,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 import PostRoute from "./PostRoute.jsx";
-import LoadBtn from "components/Users/LoadBtn.jsx";
+import GetRoute from "./GetRoute.jsx";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
@@ -33,7 +33,7 @@ export default function WorkSection() {
           <PostRoute />
         </GridItem>
         <GridItem cs={12} sm={12} md={5}>
-          <LoadBtn />
+          <GetRoute />
         </GridItem>
       </GridContainer>
     </div>
