@@ -32,6 +32,8 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
+import profileBg from "assets/img/profile-bg.jpg"
+
 const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
@@ -56,7 +58,7 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+      <Parallax small filter image={profileBg} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>

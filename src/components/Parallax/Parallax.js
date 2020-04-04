@@ -62,6 +62,9 @@ Parallax.propTypes = {
   filter: PropTypes.bool,
   children: PropTypes.node,
   style: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
   small: PropTypes.bool
 };

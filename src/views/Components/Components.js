@@ -30,6 +30,8 @@ import SectionDownload from "./Sections/SectionDownload.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
+import compBg from "assets/img/bg4.jpg"
+
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
@@ -48,7 +50,7 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg")}>
+      <Parallax image={compBg}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
