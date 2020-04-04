@@ -40,7 +40,7 @@ export default function IntroSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Database"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="In order to create helpful apps we need a way to store information and data. When it comes to implementing the tried and true SQL resources it’s hard to compete with Postgres when it comes to robust solutions that provide reliability without being overly complicated. Or for that matter, expensive. With pre-formatted schema files we demonstrate the ability of static formatting parameters to verify new data. The same can be done with dynamically formatted search strings to ease search and retrieval. "
               icon={() => <img style={{
                 maxHeight: '300px',
                 paddingLeft: '15px',
@@ -52,7 +52,7 @@ export default function IntroSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="API"
-              description={"Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."}
+              description={"Breathing life into the stack, an Express Server is built on top of Node.js to interact with the both the database and frontend client. Utilizing ‘pg-promise’ we integrate the database by connecting it with the incoming network requests from frontend clients. Javascript API’s have scalable potential by utilizing asynchronous, non-blocking I/O operations. Debugging database operations while in development can be challenging so diagnostic reports are also implemented to catch helpful information for creating and maintaining endpoints."}
               icon={() => {
                 return (
                   <div className="intro-info-section">
@@ -68,7 +68,7 @@ export default function IntroSection() {
           <GridItem xs={12} sm={12} md={4}>
             <InfoArea
               title="Front End"
-              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              description="Is it just me, or is there a lot to get excited about when it comes to beautiful, dynamic, and reactive user interfaces? The powerful React framework enabled with React Router and Redux creates the unparalleled snappines only a client side, single page application (SPA) can offer. Once mounted in a visitor’s browser, the client only needs to send and receive JSON from the API to dynamically render content. This means UI operations are sped up by freeing up resources both in the client and API. Adding in a fully capable UI Kit from Creative Tim built on top of React Material UI puts the icing on the cake!"
               icon={() => <img style={{
                 maxHeight: '300px',
                 paddingRight: '15px',

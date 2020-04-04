@@ -14,10 +14,10 @@
 
 */
 
-INSERT INTO ${schema~}.users(name) VALUES
-('Demo User 1'), -- user 1;
-('Demo User 2'), -- user 2;
-('Demo User 3'), -- user 3;
-('Demo User 4'), -- user 4;
-('Demo User 5') -- user 5;
+INSERT INTO ${schema~}.users(name, tacos) VALUES
+('Demo User A', true), -- user 1;
+('Demo User B', true), -- user 2;
+('Demo User C', false), -- user 3;
+('Demo User D', true), -- user 4;
+('Demo User E', false) -- user 5;
 RETURNING *

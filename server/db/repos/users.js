@@ -31,8 +31,10 @@ class UsersRepository {
   }
 
   // Creates the table;
-  create() {
-    return this.db.none(sql.create);
+  async create() {
+    const drop = await this.drop();
+    const create = await this.db.none(sql.create);
+    return this.init();
   }
 
   // Initializes the table with some user records, and return their id-s;
@@ -59,6 +61,7 @@ class UsersRepository {
     return this.db.one(sql.add, {
       name: values.name,
       message: values.message,
+      tacos: values.tacos,
     });
   }
 

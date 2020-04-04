@@ -23,10 +23,7 @@ export default function WorkSection() {
         <GridItem cs={12} sm={12} md={8}>
           <h2 className={classes.title}>Examples of API Routes</h2>
           <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will respond get back to you in a couple of
-            hours.
+            Putting all the pieces together is no doubt the hardest part of getting apps off the ground. Checkout the examples below to see how forms can be built using React with hooks that can submit new data to the API, consume data from the API, and manage state dynamically in the frontend. 
           </h4>
         </GridItem>
         <GridItem cs={12} sm={12} md={5}>

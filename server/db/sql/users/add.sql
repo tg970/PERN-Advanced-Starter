@@ -4,6 +4,6 @@
     NOTE: We only add schema here to demonstrate the ability of class QueryFile
     to pre-format SQL with static formatting parameters when needs to be.
 */
-INSERT INTO ${schema~}.users(name, message)
-VALUES(${name}, ${message})
+INSERT INTO ${schema~}.users(name, message, tacos)
+VALUES(${name}, ${message}, ${tacos})
 RETURNING *

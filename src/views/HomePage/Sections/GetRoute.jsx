@@ -59,7 +59,9 @@ function WorkSection(props) {
         <ul className={classes.listWrap}>
           {users && users.map((item, ind) => {
             return (
-              <li key={ind}>{item.name}</li>
+              <li key={ind}>
+                ID: {item.id}, {item.name}, {item.tacos ? ` 🌮` : null}
+              </li>
             )
           })}
         </ul>
