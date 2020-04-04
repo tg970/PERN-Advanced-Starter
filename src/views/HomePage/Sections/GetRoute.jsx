@@ -47,7 +47,7 @@ function WorkSection(props) {
         });
     }
   });
-  console.log(users);
+  
   return (
     <div className={classes.section}>
       <h4 className={classes.title}><u>Get Data</u></h4>

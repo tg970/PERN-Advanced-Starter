@@ -23,10 +23,7 @@ const hexToRgb = input => {
   input = input.replace("#", "");
   let hexRegex = /[0-9A-Fa-f]/g;
   if (!hexRegex.test(input) || (input.length !== 3 && input.length !== 6)) {
-    if (input !== undefined) {
-      console.log(input);
-      console.error("input is not a valid hex color.")
-    }
+    return undefined
   }
   if (input.length === 3) {
     let first = input[0];
