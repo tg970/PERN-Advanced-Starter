@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -8,7 +9,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paint from "@material-ui/icons/FormatPaint";
 // core components
 
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -28,7 +28,15 @@ const useStyles = makeStyles(styles);
 
 export default function HomePage(props) {
   const classes = useStyles();
-  const { ...rest } = props;
+
+  const sectionScroll = (id) => {
+    let top = document.getElementById(id).getBoundingClientRect().top;
+    window.scroll({
+      top: top,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <div>
       <Parallax filter image={homeBg}>
@@ -46,6 +54,7 @@ export default function HomePage(props) {
               <br />
               <Button
                 color="info"
+                onClick={() => sectionScroll('section-scroll')}
               >
                 <Paint />
                 Find out more
@@ -55,13 +64,13 @@ export default function HomePage(props) {
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
+        <div className={classes.container} id="section-scroll">
           <ProductSection />
           <TeamSection />
           <WorkSection />
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 }

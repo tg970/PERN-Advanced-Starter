@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -64,7 +63,7 @@ export default function Components(props) {
         <SectionCompletedExamples />
         <SectionLogin />
         <GridItem md={12} className={classes.textCenter}>
-          <Link to={"/login-page"} className={classes.link}>
+          <Link to={"/login"} className={classes.link}>
             <Button color="primary" size="lg" simple>
               View Login Page
             </Button>
@@ -73,7 +72,6 @@ export default function Components(props) {
         <SectionExamples />
         <SectionDownload />
       </div>
-      <Footer />
     </div>
   );
 }

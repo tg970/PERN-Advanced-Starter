@@ -54,7 +54,7 @@ function GET(url, handler) {
 
 function POST(url, handler) {
   router.post(url, async (req, res) => {
-    console.log('Request body: ', req.body);
+    // console.log('Request body: ', req.body);
     try {
       let data = await handler(req);
       res.status(200).json(data);

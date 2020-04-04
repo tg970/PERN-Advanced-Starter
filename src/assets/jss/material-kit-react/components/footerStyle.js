@@ -19,7 +19,8 @@ const footerStyle = {
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right!important"
+    float: "right!important",
+    display: 'flex',
   },
   footer: {
     padding: "0.9375rem 0",

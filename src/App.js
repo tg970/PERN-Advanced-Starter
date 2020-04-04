@@ -11,6 +11,7 @@ import ProfilePage from './views/ProfilePage/ProfilePage.js';
 import ScrollToTop from "components/ScrollTop/ScrollTop.js";
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
+import Footer from "components/Footer/HomeFooter.jsx";
 
 import "assets/scss/material-kit-react.scss";
 
@@ -41,6 +42,7 @@ const App = ({ store }) => (
         <Route path="/landing" component={LandingPage} />
         <Route path="/profile" component={ProfilePage} />
       </Switch>
+      <Footer />
     </Router>
   </Provider>
 );
