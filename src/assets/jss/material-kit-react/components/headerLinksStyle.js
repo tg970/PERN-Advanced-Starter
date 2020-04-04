@@ -34,7 +34,18 @@ const headerLinksStyle = theme => ({
     }
   },
   listItemText: {
-    padding: "0 !important"
+    padding: "0 !important",
+    '& a': {
+      color: 'white'
+    }
+  },
+  nav: {
+    color: 'white',
+    "&,&:focus,&:hover,&:visited": {
+      color: "inherit",
+      background: "transparent",
+      boxShadow: "none"
+    }
   },
   navLink: {
     color: "inherit",

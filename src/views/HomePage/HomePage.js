@@ -7,12 +7,12 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import Paint from "@material-ui/icons/FormatPaint";
 // core components
-import Header from "components/Header/Header.js";
+
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
+
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
@@ -22,9 +22,7 @@ import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 
-import homeBg from "assets/img/bg7.jpg";
-
-const dashboardRoutes = [];
+import homeBg from "assets/img/sign.jpg";
 
 const useStyles = makeStyles(styles);
 
@@ -33,22 +31,11 @@ export default function HomePage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        color="transparent"
-        routes={dashboardRoutes}
-        brand="PERN Starter"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-      />
       <Parallax filter image={homeBg}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={8}>
-              <h1 className={classes.title}>Every App Starts With a Foundation</h1>
+              <h1 className={classes.title}>Every App Starts<br />With a Foundation</h1>
               <h4>
                 This app is designed as a launching point for future production
                 applications. Using the latest and greatest of web development

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -60,9 +61,9 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  const brandComponent = <Link to={"/"} ><Button className={classes.title}>{brand}</Button></Link>;
   return (
-    <AppBar className={appBarClasses}>
+    <AppBar className={appBarClasses} style={{ borderRadius: "0 0 3px 3px" }}>
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>

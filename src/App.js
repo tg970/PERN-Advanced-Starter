@@ -8,6 +8,10 @@ import Components from './views/Components/Components.js';
 import LandingPage from './views/LandingPage/LandingPage.js';
 import ProfilePage from './views/ProfilePage/ProfilePage.js';
 
+import ScrollToTop from "components/ScrollTop/ScrollTop.js";
+import Header from "components/Header/Header.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
+
 import "assets/scss/material-kit-react.scss";
 
 // const indexRoutes = [
@@ -19,6 +23,17 @@ import "assets/scss/material-kit-react.scss";
 const App = ({ store }) => (
   <Provider store={store}>
     <Router>
+      <ScrollToTop />
+      <Header
+        color="transparent"
+        brand="PERN Starter"
+        rightLinks={<HeaderLinks />}
+        fixed
+        changeColorOnScroll={{
+          height: 300,
+          color: "dark"
+        }}
+      />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/login" component={LoginPage} />
