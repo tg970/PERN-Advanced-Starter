@@ -15,9 +15,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: ["babel-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -29,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/,
-        loader: "url-loader?limit=100000"
+        use: "url-loader?limit=100000"
       },
       {
         test: /\.(txt|md)$/,
@@ -39,7 +37,19 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
+    fallback: {
+      // "fs": false,
+      // "tls": false,
+      // "net": false,
+      "path": false,
+      // "zlib": false,
+      // "http": false,
+      // "https": false,
+      // "stream": false,
+      // "crypto": false,
+      // "crypto-browserify": false,
+    }
   },
   devServer: {
     port: 3001,
