@@ -9,7 +9,7 @@ What makes this an advanced starter app you ask? This project folds together sev
 
 Here's a list of the other fun bits folded into this project:
 - [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
-- [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
+- [Webpack](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
 - [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
 - [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
 - [React Material UI](https://material-ui.com/): Component library implementing Google's [Material Design](https://material.io/)
@@ -99,7 +99,7 @@ There are so many resources out there to help developers resolve issues and buil
 This starter app was inspired and guided by the following resources:
 
 - [Simple React Full Stack](https://github.com/crsandeep/simple-react-full-stack)
-- [Webpack 4 Quickstart](https://github.com/valentinogagliardi/webpack-4-quickstart)
+- [Webpack](https://webpack.js.org/)
 - [Postgres Advanced Demo](https://github.com/vitaly-t/pg-promise-demo)
 - [React & Redux Tutorial](https://www.valentinog.com/blog/react-redux-tutorial-beginners/)
 - [React - Material UI Kit](https://www.creative-tim.com/product/material-kit-react)
