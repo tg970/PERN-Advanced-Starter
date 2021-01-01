@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Advanced PERN stack starter app",
   "engines": {
-    "npm": "6.13.1",
-    "node": "13.3.0"
+    "npm": "6.14.10",
+    "node": "14.7.0"
   },
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
     "build": "webpack --mode production",
+    "heroku-postbuild": "echo Skip builds on Heroku",
     "client": "webpack serve --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
@@ -61,7 +62,6 @@
     "eslint-plugin-security": "^1.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
-    "node-sass": "^5.x.x",
     "nodemon": "^2.0.6",
     "path-browserify": "^1.0.1",
     "prop-types": "^15.6.2",
@@ -77,10 +77,11 @@
     "react-slick": "^0.27.13",
     "react-swipeable-views": "^0.13.9",
     "redux": "^4.0.1",
+    "sass": "^1.32.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.x.x",
     "url-loader": "^4.1.1",
-    "webpack": "^5.x.x",
+    "webpack": "^5.11.1",
     "webpack-cli": "^4.x.x",
     "webpack-dev-server": "^3.11.1"
   }
