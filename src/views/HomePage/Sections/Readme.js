@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from "react";
-// import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import axios from 'axios';
@@ -62,7 +62,7 @@ export default function Readme() {
           </h4>
         </GridItem>
         <GridItem cs={12} sm={12} md={10} className={classes.markdown}>
-          {/*<ReactMarkdown source={markdownDefault} />*/}
+          <ReactMarkdown source={markdownDefault} />
         </GridItem>
         <div className={classes.readMore}>
           <Button

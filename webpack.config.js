@@ -39,16 +39,7 @@ module.exports = {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
     extensions: ['.js', '.jsx', '.json'],
     fallback: {
-      // "fs": false,
-      // "tls": false,
-      // "net": false,
-      "path": false,
-      // "zlib": false,
-      // "http": false,
-      // "https": false,
-      // "stream": false,
-      // "crypto": false,
-      // "crypto-browserify": false,
+      path: false,
     }
   },
   devServer: {
