@@ -99,7 +99,7 @@ There are so many resources out there to help developers resolve issues and buil
 This starter app was inspired and guided by the following resources:
 
 - [Simple React Full Stack](https://github.com/crsandeep/simple-react-full-stack)
-- [Webpack 4 Quickstart](https://github.com/valentinogagliardi/webpack-4-quickstart)
+- [Webpack](https://webpack.js.org/)
 - [Postgres Advanced Demo](https://github.com/vitaly-t/pg-promise-demo)
 - [React & Redux Tutorial](https://www.valentinog.com/blog/react-redux-tutorial-beginners/)
 - [React - Material UI Kit](https://www.creative-tim.com/product/material-kit-react)
