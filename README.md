@@ -9,7 +9,7 @@ What makes this an advanced starter app you ask? This project folds together sev
 
 Here's a list of the other fun bits folded into this project:
 - [ESLint](https://eslint.org/): Style guide, syntax, and developer error finder and enforcer
-- [Webpack 4](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
+- [Webpack](https://webpack.js.org/): Static module bundler, complier, & hot-reloader
 - [Redux](https://redux.js.org/): Predictable state container/manager for JavaScript apps
 - [React-Router](https://github.com/ReactTraining/react-router#readme): “Dynamic Routing” (navigation) for React client
 - [React Material UI](https://material-ui.com/): Component library implementing Google's [Material Design](https://material.io/)
